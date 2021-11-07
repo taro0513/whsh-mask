@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+plt.figure('Locatiors',facecolor='c')
+ax = plt.gca()
+ax.spines['left'].set_color('none')
+ax.spines['right'].set_color('none')
+ax.spines['top'].set_color('none')
+plt.ylim(-1,1)
+plt.xlim(0,10)
+ax.spines['bottom'].set_position(('data',0))
+maloc = plt.MultipleLocator(1)
+miloc = plt.MultipleLocator(0.1)
+ax.xaxis.set_major_locator(maloc)
+ax.xaxis.set_minor_locator(miloc)
+ax.grid(which='minor',axis='x',color='orangered',linestyle=':',linewidth=0.75)
+plt.show()
